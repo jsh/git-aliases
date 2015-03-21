@@ -1,0 +1,12 @@
+ [alias]
+        lol = log --graph --decorate --oneline --all
+        index = ls-files --stage
+        ec = config --global -e # Phil Haack
+        caa = commit -a --amend -C HEAD # Nicola Paolucci
+        branchname = rev-parse --abbrev-ref HEAD # Rob Miller
+        aliases = config --get-regexp 'alias.*' # Jonas Gorauskas
+        serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git # git scm wiki
+        whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -" # Junio Hamano
+        whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short # Junio Hamano
+        lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative  # git scm wiki
+        empty-tree-sha1 = hash-object -t tree /dev/null # use with git diff --check, git scm wiki
